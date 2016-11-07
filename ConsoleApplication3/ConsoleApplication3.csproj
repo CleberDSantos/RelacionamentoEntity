@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AF82079C-A1FB-4FC4-A740-4DCFA1BE7DB6}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ConsoleApplication3</RootNamespace>
+    <AssemblyName>ConsoleApplication3</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Migrations\201611070101350_CricaoTabelaEstado.cs" />
+    <Compile Include="Migrations\201611070101350_CricaoTabelaEstado.Designer.cs">
+      <DependentUpon>201611070101350_CricaoTabelaEstado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611070113491_criacao-tabela-cidade.cs" />
+    <Compile Include="Migrations\201611070113491_criacao-tabela-cidade.Designer.cs">
+      <DependentUpon>201611070113491_criacao-tabela-cidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611070118391_renomeacao-tabela-estado.cs" />
+    <Compile Include="Migrations\201611070118391_renomeacao-tabela-estado.Designer.cs">
+      <DependentUpon>201611070118391_renomeacao-tabela-estado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611070121555_key-required-estado.cs" />
+    <Compile Include="Migrations\201611070121555_key-required-estado.Designer.cs">
+      <DependentUpon>201611070121555_key-required-estado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611070128074_validacoes-estado.cs" />
+    <Compile Include="Migrations\201611070128074_validacoes-estado.Designer.cs">
+      <DependentUpon>201611070128074_validacoes-estado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611070134312_relacionamento-1-1.cs" />
+    <Compile Include="Migrations\201611070134312_relacionamento-1-1.Designer.cs">
+      <DependentUpon>201611070134312_relacionamento-1-1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611070144161_relacionamento-n-n.cs" />
+    <Compile Include="Migrations\201611070144161_relacionamento-n-n.Designer.cs">
+      <DependentUpon>201611070144161_relacionamento-n-n.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611070151354_remocao-plural-tabelas.cs" />
+    <Compile Include="Migrations\201611070151354_remocao-plural-tabelas.Designer.cs">
+      <DependentUpon>201611070151354_remocao-plural-tabelas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611070154470_remocao-datatime-tabelas.cs" />
+    <Compile Include="Migrations\201611070154470_remocao-datatime-tabelas.Designer.cs">
+      <DependentUpon>201611070154470_remocao-datatime-tabelas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Cidade.cs" />
+    <Compile Include="Model\Cliente.cs" />
+    <Compile Include="Model\ClienteEndereco.cs" />
+    <Compile Include="Model\Contexto.cs" />
+    <Compile Include="Model\Estado.cs" />
+    <Compile Include="Model\Estudante.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201611070101350_CricaoTabelaEstado.resx">
+      <DependentUpon>201611070101350_CricaoTabelaEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611070113491_criacao-tabela-cidade.resx">
+      <DependentUpon>201611070113491_criacao-tabela-cidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611070118391_renomeacao-tabela-estado.resx">
+      <DependentUpon>201611070118391_renomeacao-tabela-estado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611070121555_key-required-estado.resx">
+      <DependentUpon>201611070121555_key-required-estado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611070128074_validacoes-estado.resx">
+      <DependentUpon>201611070128074_validacoes-estado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611070134312_relacionamento-1-1.resx">
+      <DependentUpon>201611070134312_relacionamento-1-1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611070144161_relacionamento-n-n.resx">
+      <DependentUpon>201611070144161_relacionamento-n-n.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611070151354_remocao-plural-tabelas.resx">
+      <DependentUpon>201611070151354_remocao-plural-tabelas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611070154470_remocao-datatime-tabelas.resx">
+      <DependentUpon>201611070154470_remocao-datatime-tabelas.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
